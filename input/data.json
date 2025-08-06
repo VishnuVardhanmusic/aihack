@@ -1,0 +1,135 @@
+{
+  "demand_forecasting": {
+    "orders_history": {
+      "2022-Q1": 48000,
+      "2022-Q2": 51000,
+      "2022-Q3": 45500,
+      "2022-Q4": 60000,
+      "2023-Q1": 50000,
+      "2023-Q2": 55000,
+      "2023-Q3": 47000,
+      "2023-Q4": 62000
+    },
+    "segments": [
+      {
+        "name": "automotive",
+        "share_of_orders": 0.45,
+        "priority_customers": ["Tesla", "Toyota", "Ford"]
+      },
+      {
+        "name": "consumer_electronics",
+        "share_of_orders": 0.35,
+        "priority_customers": ["Samsung", "Apple", "Sony"]
+      },
+      {
+        "name": "industrial",
+        "share_of_orders": 0.20,
+        "priority_customers": ["GE", "Siemens"]
+      }
+    ],
+    "seasonal_notes": "Festive demand spikes expected in Q4. Chinese New Year slowdown anticipated in Q1 2024. EU energy crisis may impact industrial demand mid-2024.",
+    "macro_factors": [
+      "Global semiconductor shortage still partially ongoing.",
+      "US export restrictions on advanced chips to China may shift demand to other regions.",
+      "EV adoption rates accelerating faster than forecast in Europe."
+    ]
+  },
+
+  "supplier_messages": [
+    {
+      "supplier_name": "Supplier A",
+      "product_supplied": "12nm wafers",
+      "message": "Raw material shortage expected due to political unrest in source country.",
+      "delay": "2 weeks",
+      "criticality": "high"
+    },
+    {
+      "supplier_name": "Supplier B",
+      "product_supplied": "Memory modules",
+      "message": "On track for delivery. No issues reported.",
+      "delay": "0 days",
+      "criticality": "low"
+    },
+    {
+      "supplier_name": "Supplier C",
+      "product_supplied": "Packaging materials",
+      "message": "Customs clearance delay reported at port of entry. Possible 1-week delay.",
+      "delay": "7 days",
+      "criticality": "medium"
+    },
+    {
+      "supplier_name": "Supplier D",
+      "product_supplied": "Microcontroller units (MCUs)",
+      "message": "Factory maintenance scheduled next month may reduce output temporarily.",
+      "delay": "Potential 5 days",
+      "criticality": "medium"
+    }
+  ],
+
+  "logistics_updates": {
+    "active_shipments": [
+      {
+        "container_id": "C3045",
+        "route": "Singapore → Chennai",
+        "status": "Stuck at port due to congestion",
+        "expected_delay_days": 3
+      },
+      {
+        "container_id": "A1120",
+        "route": "Taiwan → San Francisco",
+        "status": "Air freight route cleared, ETA improved",
+        "expected_delay_days": -3
+      }
+    ],
+    "external_conditions": [
+      {
+        "type": "Weather",
+        "location": "Chennai, India",
+        "alert": "Heavy rains may disrupt road transport",
+        "expected_impact": "1-2 days delay"
+      },
+      {
+        "type": "Customs",
+        "location": "Hamburg, Germany",
+        "alert": "Tighter inspections causing longer clearance times",
+        "expected_impact": "2 days average"
+      }
+    ],
+    "strategic_notes": [
+      "US–China trade tensions may cause rerouting of key shipments.",
+      "EU considering stricter CO2 regulations for cargo shipments."
+    ]
+  },
+
+  "inventory_data": {
+    "Product_X": {
+      "sku": "X-1001",
+      "description": "High-performance automotive MCU",
+      "current_stock": 15000,
+      "avg_weekly_consumption": 4000,
+      "lead_time_weeks": 6,
+      "overstock_flag": false,
+      "understock_flag": true
+    },
+    "Product_Y": {
+      "sku": "Y-2050",
+      "description": "Low-power IoT chipset",
+      "current_stock": 60000,
+      "avg_weekly_consumption": 8000,
+      "lead_time_weeks": 10,
+      "overstock_flag": true,
+      "understock_flag": false
+    },
+    "Product_Z": {
+      "sku": "Z-3300",
+      "description": "Industrial-grade power regulator",
+      "current_stock": 22000,
+      "avg_weekly_consumption": 5000,
+      "lead_time_weeks": 4,
+      "overstock_flag": false,
+      "understock_flag": false
+    }
+  },
+
+  "safety_stock_policy": "Maintain at least 2 weeks of demand as buffer for each product. High-priority SKUs (automotive MCUs, IoT chipsets) should target 3 weeks buffer."
+}

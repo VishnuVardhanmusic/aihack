@@ -1,0 +1,37 @@
+{
+  "demand_forecasting": {
+    "orders_history": {
+      "2023-Q1": 50000,
+      "2023-Q2": 55000,
+      "2023-Q3": 47000,
+      "2023-Q4": 62000
+    },
+    "segments": ["automotive", "consumer_electronics"],
+    "seasonal_notes": "Festive demand spikes expected in Q4"
+  },
+  "supplier_messages": [
+    "Supplier A: Shipment of 20k units delayed by 2 weeks due to raw material shortage.",
+    "Supplier B: On track for delivery by May 15th.",
+    "Supplier C: Facing customs clearance delays, expected late arrival."
+  ],
+  "logistics_updates": [
+    "Container 3045 stuck at Singapore port due to congestion.",
+    "Weather alert: Heavy rains in Chennai could delay road transport.",
+    "Air freight route from Taiwan cleared, expected ETA 3 days earlier."
+  ],
+  "inventory_data": {
+    "Product_X": {
+      "current_stock": 15000,
+      "avg_weekly_consumption": 4000,
+      "overstock_flag": false,
+      "understock_flag": true
+    },
+    "Product_Y": {
+      "current_stock": 60000,
+      "avg_weekly_consumption": 8000,
+      "overstock_flag": true,
+      "understock_flag": false
+    }
+  },
+  "safety_stock_policy": "Maintain 2 weeks of demand as buffer"
+}
