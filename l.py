@@ -3,25 +3,29 @@
 import json
 import os
 
+OUTPUT_JSON_FILE = os.path.join("output", "ai_report.json")
+OUTPUT_HTML_FILE = os.path.join("output", "ti_sci_report.html")
+
+
 # -----------------------------
-# Save raw responses to JSON
+# 1) Save raw responses to JSON
 # -----------------------------
-def save_responses_to_json(responses: dict, output_file: str):
-    os.makedirs(os.path.dirname(output_file), exist_ok=True)
-    with open(output_file, "w", encoding="utf-8") as f:
+def save_responses_to_json(responses: dict):
+    os.makedirs("output", exist_ok=True)
+    with open(OUTPUT_JSON_FILE, "w") as f:
         json.dump({"TI_SCI_Report": responses}, f, indent=4)
-    print(f"[INFO] Raw responses saved to {output_file}")
+    print(f"[INFO] Raw responses saved to {OUTPUT_JSON_FILE}")
 
 
 # -----------------------------
-# Convert final JSON to HTML
+# 2) Convert final JSON to HTML
 # -----------------------------
-def generate_html_from_json(input_file: str, output_file: str):
+def generate_html_from_json(input_file=OUTPUT_JSON_FILE):
     if not os.path.exists(input_file):
         print(f"[ERROR] JSON file not found: {input_file}")
         return
 
-    with open(input_file, "r", encoding="utf-8") as f:
+    with open(input_file, "r") as f:
         data = json.load(f)
 
     report = data.get("TI_SCI_Report", {})
@@ -133,7 +137,10 @@ def generate_html_from_json(input_file: str, output_file: str):
     </html>
     """
 
-    with open(output_file, "w", encoding="utf-8") as f:
+    with open(OUTPUT_HTML_FILE, "w", encoding="utf-8") as f:
         f.write(html_content)
 
-    print(f"[INFO] HTML report saved to {output_file}")
+    print(f"[INFO] HTML report saved to {OUTPUT_HTML_FILE}")
+
+
+generate_html_from_json(input_file=OUTPUT_JSON_FILE)
