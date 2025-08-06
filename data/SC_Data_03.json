@@ -1,0 +1,111 @@
+{
+  "demand_forecasting": {
+    "orders_history": {
+      "2021-Q4": 45000,
+      "2022-Q1": 48000,
+      "2022-Q2": 53000,
+      "2022-Q3": 47000,
+      "2022-Q4": 61000,
+      "2023-Q1": 49500,
+      "2023-Q2": 55500,
+      "2023-Q3": 46500,
+      "2023-Q4": 63500
+    },
+    "segments": [
+      {
+        "name": "automotive",
+        "share_of_orders": 0.47,
+        "priority_customers": ["Volkswagen", "Tesla", "BYD"],
+        "notes": "Strong EV adoption rate, chip-to-vehicle ratio increasing YOY"
+      },
+      {
+        "name": "telecom_infrastructure",
+        "share_of_orders": 0.18,
+        "priority_customers": ["Huawei", "Ericsson"],
+        "notes": "5G rollout acceleration in APAC driving demand spikes"
+      },
+      {
+        "name": "consumer_electronics",
+        "share_of_orders": 0.35,
+        "priority_customers": ["Samsung", "Sony", "Xiaomi"],
+        "notes": "Seasonality strongly tied to Diwali and Black Friday sales"
+      }
+    ],
+    "seasonal_notes": "Festive surge expected Q4; Lunar New Year lull anticipated Q1.",
+    "macro_factors": [
+      "Geopolitical risk due to US–China tensions influencing fab capacity allocation",
+      "Raw silicon wafer ASP volatility causing unpredictable BOM costs",
+      "Energy price hikes in Europe may impact industrial electronics procurement"
+    ]
+  },
+
+  "supplier_messages": [
+    {
+      "supplier_name": "Supplier Alpha",
+      "product_supplied": "7nm SoC wafers",
+      "message": "Fab yield issues reducing throughput; yield below 85% threshold.",
+      "delay": "4 weeks",
+      "criticality": "very high"
+    },
+    {
+      "supplier_name": "Supplier Beta",
+      "product_supplied": "DRAM modules",
+      "message": "Stable supply; allocated priority lanes for TI shipments.",
+      "delay": "0 days",
+      "criticality": "low"
+    },
+    {
+      "supplier_name": "Supplier Gamma",
+      "product_supplied": "Substrate packaging",
+      "message": "Fire incident in secondary plant; output down 20%.",
+      "delay": "2 weeks",
+      "criticality": "high"
+    }
+  ],
+
+  "logistics_updates": {
+    "active_shipments": [
+      {
+        "container_id": "MX2048",
+        "route": "Shanghai → Rotterdam",
+        "status": "Held in customs for extended dual-use tech checks",
+        "expected_delay_days": 10
+      }
+    ],
+    "external_conditions": [
+      {
+        "type": "Weather",
+        "location": "Manila",
+        "alert": "Typhoon impact halting port operations for 3 days",
+        "expected_impact": "72 hours disruption"
+      }
+    ],
+    "strategic_notes": [
+      "IMO emission regulations may reroute cargo ships from Suez Canal",
+      "India ramping up domestic semiconductor fabs; future supply diversification possible"
+    ]
+  },
+
+  "inventory_data": {
+    "Chip_A": {
+      "sku": "CA-5000",
+      "description": "7nm Automotive SoC",
+      "current_stock": 8000,
+      "avg_weekly_consumption": 3500,
+      "lead_time_weeks": 12,
+      "overstock_flag": false,
+      "understock_flag": true
+    },
+    "Module_B": {
+      "sku": "MB-780",
+      "description": "LPDDR5 DRAM",
+      "current_stock": 40000,
+      "avg_weekly_consumption": 5000,
+      "lead_time_weeks": 8,
+      "overstock_flag": true,
+      "understock_flag": false
+    }
+  },
+
+  "safety_stock_policy": "Critical automotive-grade SKUs require minimum 3 weeks buffer; consumer electronics 2 weeks; telecom 4 weeks buffer."
+}

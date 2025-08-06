@@ -1,0 +1,41 @@
+{
+  "demand_forecasting": {
+    "orders_history": {
+      "2023-Q3": 47000,
+      "2023-Q4": 62000
+    },
+    "segments": [],
+    "seasonal_notes": "Festive spike expected.",
+    "macro_factors": []
+  },
+
+  "supplier_messages": [
+    {
+      "supplier_name": "Supplier A",
+      "product_supplied": "General ICs",
+      "message": "Minor delay.",
+      "delay": "3 days",
+      "criticality": "low"
+    }
+  ],
+
+  "logistics_updates": {
+    "active_shipments": [],
+    "external_conditions": [],
+    "strategic_notes": []
+  },
+
+  "inventory_data": {
+    "Product_1": {
+      "sku": "P1",
+      "description": "Generic IC",
+      "current_stock": 5000,
+      "avg_weekly_consumption": 2000,
+      "lead_time_weeks": 6,
+      "overstock_flag": false,
+      "understock_flag": true
+    }
+  },
+
+  "safety_stock_policy": "Maintain 2 weeks buffer."
+}

@@ -1,0 +1,91 @@
+{
+  "demand_forecasting": {
+    "orders_history": {
+      "2022-Q1": 48000,
+      "2022-Q2": 51000,
+      "2022-Q3": 45500,
+      "2022-Q4": 60000,
+      "2023-Q1": 50000,
+      "2023-Q2": 55000,
+      "2023-Q3": 47000,
+      "2023-Q4": 62000
+    },
+    "segments": [
+      {
+        "name": "automotive",
+        "share_of_orders": 0.45,
+        "priority_customers": ["Tesla", "Toyota", "Ford"]
+      },
+      {
+        "name": "consumer_electronics",
+        "share_of_orders": 0.35,
+        "priority_customers": ["Samsung", "Apple", "Sony"]
+      }
+    ],
+    "seasonal_notes": "Festive demand spikes expected in Q4; New Year dip in Q1.",
+    "macro_factors": [
+      "EV adoption increasing",
+      "Global chip supply recovering slowly"
+    ]
+  },
+
+  "supplier_messages": [
+    {
+      "supplier_name": "Supplier A",
+      "product_supplied": "12nm wafers",
+      "message": "Delay due to raw material shortage.",
+      "delay": "2 weeks",
+      "criticality": "high"
+    },
+    {
+      "supplier_name": "Supplier B",
+      "product_supplied": "Memory modules",
+      "message": "On schedule.",
+      "delay": "0 days",
+      "criticality": "low"
+    }
+  ],
+
+  "logistics_updates": {
+    "active_shipments": [
+      {
+        "container_id": "C3045",
+        "route": "Singapore → Chennai",
+        "status": "Port congestion",
+        "expected_delay_days": 3
+      }
+    ],
+    "external_conditions": [
+      {
+        "type": "Weather",
+        "location": "Chennai, India",
+        "alert": "Heavy rains",
+        "expected_impact": "1-2 days delay"
+      }
+    ],
+    "strategic_notes": []
+  },
+
+  "inventory_data": {
+    "Product_X": {
+      "sku": "X-1001",
+      "description": "Automotive MCU",
+      "current_stock": 15000,
+      "avg_weekly_consumption": 4000,
+      "lead_time_weeks": 6,
+      "overstock_flag": false,
+      "understock_flag": true
+    },
+    "Product_Y": {
+      "sku": "Y-2050",
+      "description": "IoT chipset",
+      "current_stock": 60000,
+      "avg_weekly_consumption": 8000,
+      "lead_time_weeks": 10,
+      "overstock_flag": true,
+      "understock_flag": false
+    }
+  },
+
+  "safety_stock_policy": "Maintain 2 weeks demand buffer for all SKUs."
+}
